@@ -293,7 +293,7 @@ textarea:focus{
 }
 /* --------------------------------------------------------- */
 .dashboard-content .yearly-targets .money i,
-.dashboard-content .yearly-targets .projects i,
+.dashboard-content .yearly-targets .project i,
 .dashboard-content .yearly-targets .team i{
   width: 80px;
   height: 80px;
@@ -310,7 +310,7 @@ textarea:focus{
   color: var(--color-blue);
   background-color: rgb(0 117 255 / 20%);
 }
-.dashboard-content .yearly-targets .projects i{
+.dashboard-content .yearly-targets .project i{
   color: var(--orange-color);
   background-color: rgb(245 158 11 / 20%);
 }
@@ -328,7 +328,7 @@ textarea:focus{
 .dashboard-content .yearly-targets .money .info .progress{
   background-color: rgb(0 117 255 / 20%);
 }
-.dashboard-content .yearly-targets .projects .info .progress{
+.dashboard-content .yearly-targets .project .info .progress{
   background-color: rgb(245 158 11 / 20%);
 }
 .dashboard-content .yearly-targets .team .info .progress{
@@ -352,7 +352,7 @@ textarea:focus{
 .dashboard-content .yearly-targets .money .progress span::before{
   background-color: var(--color-blue);
 }
-.dashboard-content .yearly-targets .projects .progress span::before{
+.dashboard-content .yearly-targets .project .progress span::before{
   background-color: var(--orange-color);
 }
 .dashboard-content .yearly-targets .team .progress span::before{
@@ -370,7 +370,7 @@ textarea:focus{
 .yearly-targets .money .progress span::after{
   border-color: var(--color-blue) transparent transparent transparent;
 }
-.yearly-targets .projects .progress span::after{
+.yearly-targets .project .progress span::after{
   border-color: var(--orange-color) transparent transparent transparent;
 }
 .yearly-targets .team .progress span::after{
