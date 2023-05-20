@@ -1,0 +1,156 @@
+:root{
+  --blue-color:#0075ff;
+  --alert-blue:#0d69d5;
+  --orange-color:#f59e0b;
+  --green-color:#22c55e;
+  --red-color:#f44336;
+  --grey-color:#888;
+}
+/* Start display */
+.d-flex{
+  display: flex;
+}
+.fw-wrap{
+  flex-wrap:wrap;
+}
+.gap-20{
+  gap: 20px;
+}
+.center-flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.between-flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.d-block{
+  display: block;
+}
+.align-center{
+  text-align: center  ;
+}
+/* End display */
+/* Start position */
+.p-relative{
+  position: relative;
+}
+/* End position */
+/* Start color */
+.c-black{
+  color: black;
+}
+.c-white{
+  color: white;
+}
+.c-blue{
+  color: var(--blue-color);
+}
+.c-orange{
+  color: var(--orange-color);
+}
+.c-green{
+  color: var(--green-color);
+}
+.c-red{
+  color: var(--red-color);
+}
+.c-gray{
+  color: var(--grey-color);
+}
+.bg-white{
+  background-color: white;
+}
+.bg-eee{
+  background-color: #eee;
+}
+.bg-blue{
+  background-color: var(--blue-color);
+}
+.bg-orange{
+  background-color: var(--orange-color);
+}
+.bg-green{
+  background-color: var(--green-color);
+}
+.bg-red{
+  background-color: var(--red-color);
+}
+/* End color */
+/* Start padding + margin */
+  .p-10{
+    padding: 10px;
+  }
+  .p-20{
+    padding: 20px;
+  }
+  .m-10{
+    margin: 10px;
+  }
+  .mt-0{
+    margin: 0;
+  } 
+  .mt-5{
+    margin-top: 5px;
+  }
+  .mt-10{
+    margin-top: 10px;
+  }
+  .mt-20{
+    margin-top: 20px;
+  }
+  .mr-5{
+    margin-right: 5px;
+  }
+  .mr-10{
+    margin-right: 10px;
+  }
+  .mb-5{
+    margin-bottom: 5px;
+  }
+  .mb-10{
+    margin-bottom: 10px;
+  }
+  .mb-20{
+    margin-bottom: 20px;
+  }
+/* End padding + margin */
+/* Start Font */
+  .fs-14{
+    font-size: 14px;
+  }
+  .fs-20{
+    font-size:20px ;
+  }
+  .fs-25{
+    font-size:25px ;
+  }
+  .fw-bold{
+    font-weight: bold;
+  }
+/* End Font */
+
+/* Start border */
+.rad-6{
+  border-radius: 6px;
+}
+.rad-10{
+  border-radius: 10px;
+}
+.rad-full{
+  border-radius: 50%;
+}
+.bb-eee{
+  border-bottom: 1px solid #eee;
+}
+/* End border */
+/* Start Width */
+  .w-full{
+    width: 100%;
+  }
+  .w-fit{
+    width: fit-content;
+  }
+/* End Width */
