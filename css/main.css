@@ -665,5 +665,7 @@ textarea:focus{
   margin: auto;
   text-align: center;
 }
-
+.projects table tr:hover{
+  background-color: #faf7f7;
+}
 /* End Dashboard content*/
