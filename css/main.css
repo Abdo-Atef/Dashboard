@@ -140,44 +140,44 @@ textarea:focus{
 .content{
   overflow: hidden;
 }
-.header{
+.page-header{
   display: flex;
   justify-content: space-between;
   background-color: white;
+  padding: 16px 20px;
 }
-.header .form input{
+.page-header .form input{
   padding: 10px 10px 10px 30px;
   border: 1px solid #ccc;
   border-radius: 7px;
   width: 160px;
   transition: width .3s;
-  position: relative;
 }
-.header .form::before{
+.page-header .form::before{
+  position: absolute;
   content: "\f002";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  left: 10px;
-  position: absolute;
   font-size: 14px;
-  z-index: 5;
+  color: var(--grey-color);
+  left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--grey-color);
+  z-index: 5;
 }
-.header .form input:focus{
+.page-header .form input:focus{
   outline: none;
   width: 200px;
 }
-.header .form input:focus::placeholder{
+.page-header .form input:focus::placeholder{
   opacity: 0;
 }
-.content .header .notifi{
+.content .page-header .notifi{
   display: flex;
   align-items: center;
   gap: 15px;
 }
-.content .header .notifi i::after{
+.content .page-header .notifi i::after{
   content: '';
   position: absolute;
   width: 10px;
@@ -192,7 +192,7 @@ textarea:focus{
 .page .content{
   background-color: #f1f5f9;
 }
-.dashboard-content .main-header::after{
+.main-header-page::after{
   content: '';
   position: absolute;
   width: 130px;
@@ -201,7 +201,7 @@ textarea:focus{
   bottom: 10px;
   left: 20px;
 }
-.dashboard-content .main-header::before{
+.main-header-page::before{
   content: '';
   position: absolute;
   width: 40px;
@@ -211,34 +211,34 @@ textarea:focus{
   left: 20px;
   z-index: 1;
 }
-.dashboard-content .boxs{
+.dashboard-content .dashboard-boxes{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   gap: 20px;
 }
 @media (max-width:767px){
-  .dashboard-content .boxs{
+  .dashboard-content .dashboard-boxes{
     grid-template-columns:  minmax(200px, 1fr);
   }
 }
-.dashboard-content .boxs .welome .part1{
+.dashboard-content .dashboard-boxes .welome .part1{
   display: flex;
   justify-content: space-between;
   border-radius: 10px 10px 0 0;
 }
-.dashboard-content .boxs .welome .part1 img{
+.dashboard-content .dashboard-boxes .welome .part1 img{
   width: 200px;
 }
 @media (max-width:767px){
-  .dashboard-content .boxs .welome .part1 img{
+  .dashboard-content .dashboard-boxes .welome .part1 img{
     display: none;
   }
-  .dashboard-content .boxs .welome .center-image{
+  .dashboard-content .dashboard-boxes .welome .center-image{
     left: 50% !important;
     transform: translateX(-50%) !important;
   }
 }
-.dashboard-content .boxs .welome .center-image{
+.dashboard-content .dashboard-boxes .welome .center-image{
   width: 65px;
   border: 4px solid white;
   border-radius: 50%;
@@ -246,7 +246,7 @@ textarea:focus{
   left: 20px;
   top: -32px;
 }
-.dashboard-content .boxs .welome .part2{
+.dashboard-content .dashboard-boxes .welome .part2{
   display: flex;
   justify-content: space-evenly;
   background-color: white;
@@ -256,28 +256,17 @@ textarea:focus{
   text-align: center;
 }
 @media (max-width:767px){
-  .dashboard-content .boxs .welome .part2{
+  .dashboard-content .dashboard-boxes .welome .part2{
     flex-direction: column;
     gap: 20px;
     text-align: center;
   }
 }
-.dashboard-content .boxs .welome .part3 a{
-  display: block;
+.dashboard-content .dashboard-boxes .welome .part3 a{
   margin: 20px 15px 15px auto;
-  width: fit-content;
-  background-color: var(--color-blue);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 6px;
-  font-size: 14px;
-  transition: .3s;
-}
-.dashboard-content .boxs .welome .part3 a:hover{
-  background-color: var(--alert-blue);
 }
 /* --------------------------------------------------------- */
-.dashboard-content .quick-draft input, 
+.dashboard-content .quick-draft input[type="text"], 
 .dashboard-content .quick-draft textarea{
   width: 100%;
   padding: 10px;
@@ -286,23 +275,15 @@ textarea:focus{
   border-radius: 6px;
   margin-bottom: 20px;
 }
-.dashboard-content .boxs textarea{
+.dashboard-content .dashboard-boxes textarea{
   height: 200px;
   resize: none;
 }
-.dashboard-content .boxs .quick-draft input[type="submit"]{
-  width: fit-content;
-  background-color: var(--color-blue);
-  color: white;
-  padding: 6px 12px;
-  font-size: 15px;
-  cursor: pointer;
+.dashboard-content .quick-draft input[type="submit"]{
+  border: none;
   margin: 0 0 0 auto;
-  display: block;
-  transition: .3s;
-}
-.dashboard-content .boxs .quick-draft [type="submit"]:hover{
-  background-color: var(--alert-blue);
+  cursor: pointer;
+  font-size: 15px;
 }
 /* --------------------------------------------------------- */
 .dashboard-content .yearly-targets .money i,
@@ -584,25 +565,25 @@ textarea:focus{
   margin-bottom: 20px;
 }
 /* --------------------------------------------------------- */
-.social-media ul li a{
-  color: white;
-  display: block;
-  width: 62px;
+.social-media ul .twitter a{
   background-color: #1da1f2;
-  padding: 5px 0px;
-  border-radius: 6px;
-  font-size: 12.5px;
-  text-align: center;
 }
 .social-media ul .facebook a{
   background-color: #1877f2;
 }
 .social-media ul .linkedin a{
   background-color: #0077b5;
-
 }
 .social-media ul .youtube a{
   background-color: #ff0000;
+}
+@media (max-width:600px) {
+  .social-media ul li div{
+    padding: 0 8px !important;
+  }
+  .social-media ul li a{
+    font-size: 12px;
+  }
 }
 .social-media ul i{
   background-color: #1da1f2;
@@ -682,3 +663,210 @@ textarea:focus{
   background-color: #faf7f7;
 }
 /* End Dashboard content*/
+/* Start Settings Page */
+.page .settings-content .settings-boxes{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+@media (max-width:767px){
+  .page .settings-content .settings-boxes{
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr);
+    gap: 10px;
+  }
+}
+/* -------------------------------------------------------- */
+label .toggle-checkbox{
+  -webkit-appearance:none ;
+  appearance: none;
+  display: none;
+}
+.toggle-switch{
+  background-color: #ccc;
+  width: 60px;
+  height: 25px;
+  border-radius: 16px;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.toggle-switch::before{
+  content: "\f00d";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  background-color: white;
+  color: #aaa;
+  left: 4px;
+  top: 50%;
+  width: 17px;
+  height: 17px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+  font-size: 11px;
+}
+@media (max-width:600px){
+  .settings-content .site-control > div p,
+  .settings-content .security-info > div p{
+    width: 160px;
+  }
+}
+.toggle-checkbox:checked + .toggle-switch{
+  background-color: var(--color-blue);
+}
+.toggle-checkbox:checked + .toggle-switch::before{
+  content: "\f00c";
+  left: 40px;
+  color: var(--color-blue);
+}
+/* -------------------------------------------------------- */
+.settings-content .settings-boxes .site-control textarea{
+  resize: none;
+  height: 150px;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 6px;
+}
+.settings-content .settings-boxes .general-info input{
+  border: 1px solid #ccc;
+}
+.settings-content .settings-boxes .general-info input[type="email"]{
+  cursor: not-allowed;
+  width: calc(100% - 72px);
+  margin-right: 10px;
+}
+/* -------------------------------------------------------- */
+.social-info div input{
+  border: 1px solid #ddd;
+  border-radius: 0 6px 6px 0;
+  padding: 10px;
+  background-color: #f6f6f6;
+  width: 100%;
+}
+.social-info div i{
+  border: 1px solid #ddd;
+  border-right: none;
+  padding: 10px;
+  background-color: #f6f6f6;
+  border-radius: 6px 0 0 6px;
+  color: var(--grey-color);
+  width: 40px;
+  text-align: center;
+  transition: .3s;
+}
+.social-info > div:focus-within i{
+  color: var(--color-blue);
+}
+.social-info > div:last-child:focus-within i{
+  color: var(--red-color);
+}
+/* -------------------------------------------------------- */
+.widgets-control > div{
+  margin-bottom: 12px;
+}
+.widgets-control > div input{
+  -webkit-appearance: none;
+  appearance: none;
+}
+.widgets-control > div label .check-box{
+  width: 18px;
+  height: 18px;
+  border: 1px solid gray;
+  margin-right: 7px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.widgets-control > div label .check-box::before{
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: white;
+  width: 0%;
+  height: 0%;
+  display: flex;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;  
+}
+.widgets-control > div input:checked + .check-box::before{
+  transform: rotate(-360deg);
+  background-color: var(--color-blue);
+  width: 100%;
+  height: 100%;
+}
+/* -------------------------------------------------------- */
+.backup-manager > .select label input{
+  -webkit-appearance: none;
+  appearance: none;
+}
+.backup-manager .select label{
+  cursor: pointer;
+}
+.backup-manager > .select label div{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  margin-right: 7px;
+  position: relative;
+}
+.backup-manager > .select label  div::before{
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  transition: .3s;
+}
+.backup-manager > .select label input:checked + div::before{
+  width: 14px;
+  height: 14px;
+  background-color: var(--color-blue);
+}
+/* -------------------------------------------------------- */
+.backup-manager .servers{
+  margin-top: 20px;
+  display: flex; 
+  justify-content: space-between;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+@media (max-width:600px) {
+  .backup-manager .servers{
+    flex-direction: column;
+  }
+}
+.backup-manager .servers > input{
+  -webkit-appearance: none;
+  appearance: none;
+}
+.backup-manager .servers > input:checked + label{
+  border: 2px solid var(--color-blue);
+}
+.backup-manager .servers > input:checked + label i,
+.backup-manager .servers > input:checked + label p{
+  color: var(--color-blue);
+}
+.backup-manager .servers > label{
+  text-align: center;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  flex: 1;
+  position: relative;
+  cursor: pointer;
+  padding: 15px;
+}
+/* End Settings Page */
